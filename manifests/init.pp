@@ -1,7 +1,7 @@
-# Class: packetbeat
+# Class: topbeat
 # ===========================
 #
-# Full description of class packetbeat here.
+# Full description of class topbeat here.
 #
 # Parameters
 # ----------
@@ -28,7 +28,7 @@
 # --------
 #
 # @example
-#    class { 'packetbeat':
+#    class { 'topbeat':
 #      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #    }
 #
@@ -42,16 +42,16 @@
 #
 # Copyright 2016 Your name here, unless otherwise noted.
 #
-class packetbeat (
-    $ensure = $packetbeat::params::ensure,
-    $status = $packetbeat::params::status,
+class topbeat (
+    $ensure = $topbeat::params::ensure,
+    $status = $topbeat::params::status,
     $manage_repo = false,
-    $configfile = $packetbeat::params::configfile,
-    $sniffer = {},
+    $configfile = $topbeat::params::configfile,
+    $input = {},
     $output = {},
     $shipper = {},
     $logging = {}
-) inherits packetbeat::params {
+) inherits topbeat::params {
 
     ### Validate input ###
 
@@ -60,9 +60,9 @@ class packetbeat (
 
     ###
     if ($manage_repo == true) {
-        include packetbeat::repo
+        include topbeat::repo
     }
-    include packetbeat::package
-    include packetbeat::config
-    include packetbeat::service
+    include topbeat::package
+    include topbeat::config
+    include topbeat::service
 }
