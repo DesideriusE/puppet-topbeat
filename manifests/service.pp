@@ -1,9 +1,9 @@
 #
-class packetbeat::service (
-  $ensure             = $packetbeat::ensure
+class topbeat::service (
+  $ensure             = $topbeat::ensure
 ){
   
-  service { 'packetbeat':
+  service { 'topbeat':
     ensure => 'running',
     enable => true
   }
