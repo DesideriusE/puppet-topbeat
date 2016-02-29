@@ -1,0 +1,21 @@
+input:
+  # In seconds, defines how often to read server statistics
+  period: <%= @input_conf['period'] %>
+
+  # Regular expression to match the processes that are monitored
+  # By default, all the processes are monitored
+  procs: ["<%= @input_conf['procs'].sort.join('","') %>"]
+
+  # Statistics to collect (all enabled by default)
+  stats:
+    # per system statistics, by default is true
+    system: <%= @input_conf['stats']['system'] %>
+
+    # per process statistics, by default is true
+    process: <%= @input_conf['stats']['process'] %>
+
+    # file system information, by default is true
+    filesystem: <%= @input_conf['stats']['filesystem'] %>
+
+    # cpu usage per core, by default is false
+    cpu_per_core: <%= @input_conf['stats']['cpu_per_core'] %>
