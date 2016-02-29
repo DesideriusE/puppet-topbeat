@@ -7,7 +7,7 @@ class topbeat::config {
 
     $input_conf = deep_merge($topbeat::params::input, $topbeat::input)
 
-    concat::fragment { 'input':
+    concat::fragment { 'topbeat-input':
         target  => $topbeat::configfile,
         order   => 10,
         content => template('topbeat/config/10_input.erb'),
@@ -15,7 +15,7 @@ class topbeat::config {
 
     $output_conf = deep_merge($topbeat::params::output, $topbeat::output)
 
-    concat::fragment { 'output':
+    concat::fragment { 'topbeat-output':
         target  => $topbeat::configfile,
         order   => 40,
         content => template('topbeat/config/40_output.erb'),
@@ -23,7 +23,7 @@ class topbeat::config {
 
     $shipper_conf = deep_merge($topbeat::params::shipper, $topbeat::shipper)
 
-    concat::fragment { 'shipper':
+    concat::fragment { 'topbeat-shipper':
         target  => $topbeat::configfile,
         order   => 50,
         content => template('topbeat/config/50_shipper.erb'),
@@ -31,7 +31,7 @@ class topbeat::config {
 
     $logging_conf = deep_merge($topbeat::params::logging, $topbeat::logging)
 
-    concat::fragment { 'logging':
+    concat::fragment { 'topbeat-logging':
         target  => $topbeat::configfile,
         order   => 60,
         content => template('topbeat/config/60_logging.erb'),
