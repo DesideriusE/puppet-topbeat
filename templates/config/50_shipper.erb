@@ -9,7 +9,7 @@ shipper:
   # The tags of the shipper are included in their own field with each
   # transaction published. Tags make it easy to group servers by different
   # logical properties.
-  tags: <% if (!@shipper_conf['tags'].any?) %>[]<% else %>['<%= shipper_conf['tags'].join("','") %>']<% end %>
+  tags: <% if (!@shipper_conf['tags'].any?) %>[]<% else %>['<%= @shipper_conf['tags'].join("','") %>']<% end %>
 
   # Uncomment the following if you want to ignore transactions created
   # by the server on which the shipper is installed. This option is useful
