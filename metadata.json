@@ -1,6 +1,6 @@
 {
   "name": "ferrydg-topbeat",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "author": "ferrydg",
   "summary": "Topbeat is a lightweight shipper that you can install on your servers to periodically read system-wide and per-process CPU and memory statistics and then index the statistics in Elasticsearch.",
   "license": "Apache-2.0",
