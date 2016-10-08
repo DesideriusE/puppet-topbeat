@@ -7,9 +7,7 @@
   "source": "https://github.com/ferrydg/puppet-topbeat",
   "project_page": "https://github.com/ferrydg/puppet-topbeat",
   "issues_url": "https://github.com/ferrydg/puppet-topbeat/issues",
-  "dependencies": [
-    {"name":"ispavailability/file_concat","version_requirement":">= 0.3.0"}
-  ],
+  "dependencies": [],
   "data_provider": null
 }
 

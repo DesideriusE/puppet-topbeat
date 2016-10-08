@@ -4,7 +4,7 @@ input:
 
   # Regular expression to match the processes that are monitored
   # By default, all the processes are monitored
-  procs: ["<%= @input_conf['procs'].sort.join('","') %>"]
+  procs: ["<%= [@input_conf['procs']].flatten.sort.join('","') %>"]
 
   # Statistics to collect (all enabled by default)
   stats:
