@@ -43,10 +43,10 @@
 # Copyright 2016 Your name here, unless otherwise noted.
 #
 class topbeat (
-    $ensure = $topbeat::params::ensure,
-    $status = $topbeat::params::status,
+    $ensure = $::topbeat::params::ensure,
+    $status = $::topbeat::params::status,
     $manage_repo = false,
-    $configfile = $topbeat::params::configfile,
+    $configfile = $::topbeat::params::configfile,
     $input = {},
     $output = {},
     $shipper = {},

@@ -1,6 +1,6 @@
 #
 class topbeat::package (
-  $ensure = $topbeat::ensure
+  $ensure = $::topbeat::ensure
 ) {
 
   package { 'topbeat':
